@@ -12,4 +12,4 @@ def get_db():
 
 
 def save_db(db):
-    return open(DB_FILE).write(json.dumps(db))
+    return open(DB_FILE, 'w+').write(json.dumps(db))
