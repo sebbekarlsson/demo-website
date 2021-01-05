@@ -1,0 +1,8 @@
+[Unit]
+Description=Webhook service
+
+[Service]
+ExecStart=/root/webhook/venv/bin/python /root/webhook/__main__.py
+
+[Install]
+WantedBy=multi-user.target
