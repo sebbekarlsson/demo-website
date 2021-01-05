@@ -1,0 +1,19 @@
+server {
+   listen 80;
+   listen [::]:80;
+
+   # Use this servername
+   # server_name example.com;
+
+   # Use this root
+   root /var/www/demo-website;
+
+   # Index these files
+   index index.html index.htm;
+
+   # Use this location
+   location / {
+       try_files $uri $uri/ =404;
+       autoindex on;
+   }
+}
