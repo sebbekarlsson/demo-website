@@ -1,0 +1,9 @@
+[Unit]
+Description=Demo website
+
+[Service]
+WorkingDirectory=/var/www/demo-website
+ExecStart=/var/www/demo-website/venv/bin/python /var/www/demo-website/__main__.py
+
+[Install]
+WantedBy=multi-user.target
