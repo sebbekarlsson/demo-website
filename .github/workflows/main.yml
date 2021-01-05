@@ -32,7 +32,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          virtualenv -p /usr/bin/python3.9 ./venv
+          whereis python
+          whereis python3
+          whereis python3.9
+          virtualenv -p $(which python3) ./venv
           source ./venv/bin/activate
-          python setup.py develop
+          ./venv/bin/python setup.py develop
           pytest
